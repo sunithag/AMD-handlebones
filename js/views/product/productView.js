@@ -28,7 +28,7 @@ define([
 
         render: function(){
 
-            var model = new homeModel({});
+            var model = new productModel({});
             var template = Handlebars.templates['product/index'] ;
             var output = template(model);
             this.$el.html(output);
