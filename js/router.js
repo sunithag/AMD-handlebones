@@ -7,11 +7,9 @@ define([
     'templates',
     'views/home/homeView',
     'views/product/productView'
-], function($, _, Backbone, handlebars, templates, homeView, productView) {
+], function($, _, Backbone, Handlebars, templates, homeView, productView) {
 
-    var homeView = homeView;
-    var productView = productView;
-
+    var that = this;
 
     var AppRouter = Backbone.Router.extend({
         routes: {
@@ -28,15 +26,16 @@ define([
 
         app_router.on('route:index', function(){
             // Call render on the module we loaded in via the dependency array
-            homeView = new homeView();
-            homeView.render();
+
+            var view = new homeView();
+            view.render();
 
         });
 
         app_router.on('route:productDetails', function () {
 
-            productView = new productView();
-            productView.render();
+            var view  = new productView();
+            view.render();
         });
 
         Backbone.history.start();
