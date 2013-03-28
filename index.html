@@ -8,7 +8,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
 
-<!--keep all inline script out of the HTML, and only reference require.js with a require call like so to load your script: -->
+<!--<!-- data-main attribute tells require.js to load
+             js/main.js after require.js loads. -->-->
+
+      <!--This sets the baseUrl to the "js" directory, and
+    loads a script that will have a module ID of 'main'-->
     <script data-main="js/main" src="js/libs/require.js"></script>
    </head>
   <body>

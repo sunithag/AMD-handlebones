@@ -1,4 +1,9 @@
-// Filename: router.js
+// router.js has some depencies - jquery, underscore, backbone, handlebars, templates, homeview, productview.
+// baseurl was set to 'js' in the index.html. load dependencies defined in the define() and pass them to the object
+//definition in the same order.
+
+//You may encounter some define() calls that include a name for the module as the first argument to define():
+
 define([
     'jquery',
     'underscore',
@@ -8,6 +13,7 @@ define([
     'views/home/homeView',
     'views/product/productView'
 ], function($, _, Backbone, Handlebars, templates, homeView, productView) {
+    //define router object here
 
     var that = this;
 
@@ -40,6 +46,8 @@ define([
 
         Backbone.history.start();
     };
+
+    //return a function to define js/router.js
     return {
         initialize: initialize
     };
